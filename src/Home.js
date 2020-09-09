@@ -14,12 +14,14 @@ function Home() {
         />
         <div className="home__row">
           <Product
+            id={1}
             title="The Lean Startup: How Constant Innovation Creates Radically Successful Businesses"
             price={499.25}
             img="https://m.media-amazon.com/images/I/81jgCiNJPUL._AC_UY218_.jpg"
             rating={5}
           />
           <Product
+            id={2}
             title="Kenwood FDM301SS Multipro Compact (800 Watt) Foodprocessor"
             price={16421}
             rating={4}
@@ -28,18 +30,21 @@ function Home() {
         </div>
         <div className="home__row">
           <Product
+            id={3}
             title="Samsung 23.5 inch (59.8 cm) Curved LED Backlit Computer Monitor "
             price={9699}
             rating={5}
             img="https://m.media-amazon.com/images/I/71nplbAMwzL._AC_UY218_.jpg"
           />
           <Product
+            id={4}
             title="Echo Dot (3rd Gen) – New and improved smart speaker with Alexa (Black)"
             price={3499}
             rating={5}
             img="https://m.media-amazon.com/images/I/61EXU8BuGZL._AC_UY218_.jpg"
           />
           <Product
+            id={5}
             title="Apple iPad (10.2-inch, Wi-Fi, 32GB) - Space Grey (Latest Model)"
             price={29900}
             img="https://m.media-amazon.com/images/I/71TJA+sJv2L._AC_UY218_.jpg"
@@ -48,6 +53,7 @@ function Home() {
         </div>
         <div className="home__row">
           <Product
+            id={6}
             title="Samsung 23.5 inch (59.8 cm) Curved LED Backlit Computer Monitor - Full HD, VA Panel with VGA, HDMI, Audio Ports - LC24F390FHWXXL (Black)"
             img="https://m.media-amazon.com/images/I/71nplbAMwzL._AC_UY218_.jpg"
             price={9699}
