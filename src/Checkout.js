@@ -4,7 +4,19 @@ import "./Checkout.css";
 function Checkout() {
   return (
     <div className="checkout">
-      <h1>Checkout</h1>
+      <div className="checkout__left">
+        <img
+          src="https://images-na.ssl-images-amazon.com/images/G/02/UK_CCMP/TM/OCC_Amazon1._CB423492668.jg"
+          alt=""
+          className="checkout__add"
+        />
+        <div>
+          <h2 className="checkout__title">Your shopping Basket</h2>
+        </div>
+      </div>
+      <div className="checkout__right">
+          <h2>The subtotal</h2>
+      </div>
     </div>
   );
 }
