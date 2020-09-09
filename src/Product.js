@@ -5,8 +5,6 @@ import { useStateValue } from "./StateProvider";
 function Product({ title, img, price, rating, id }) {
   const [{ basket }, dispatch] = useStateValue();
 
-  console.log("This is the basket >>>>>>>>", basket);
-
   const addToBasket = () => {
     dispatch({
       type: "ADD_TO_BASKET",
@@ -20,19 +18,21 @@ function Product({ title, img, price, rating, id }) {
     });
   };
 
+  const cost = price.toLocaleString(undefined, { maximumFractionDigits: 2 }); // "1,234.57"
+
   return (
     <div className="product">
       <div className="product__info">
         <p>{title}</p>
         <p className="product__price">
           <small>₹</small>
-          <strong>{price}</strong>
+          <strong>{cost}</strong>
         </p>
         <div className="product__rating">
           {Array(rating)
             .fill()
             .map((_, i) => (
-              <p>⭐</p>
+              <p >⭐</p>
             ))}
         </div>
       </div>
