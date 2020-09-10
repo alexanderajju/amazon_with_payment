@@ -33,6 +33,10 @@
   border-color: #a88734 #9c7e31 #846a29;
   color: #111;
 }
+.product > button:hover{
+  background: #f0b319;
+  border-color: #e2be61 #d3af53 #a18847;
+}
 .product__rating {
   display: flex;
 }

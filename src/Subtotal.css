@@ -26,3 +26,7 @@
   border-color: #a88734 #9c7e31 #846a29;
   color: #111;
 }
+.subtotal>button:hover{
+  background: #f0b319;
+  border-color: #e2be61 #d3af53 #a18847;
+}

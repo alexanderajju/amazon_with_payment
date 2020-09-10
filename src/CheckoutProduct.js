@@ -22,7 +22,7 @@ const CheckoutProduct = forwardRef(({ id, img, title, price, rating }, ref) => {
           {Array(rating)
             .fill()
             .map((_, i) => (
-              <p>⭐</p>
+              <p key={id}>⭐</p>
             ))}
         </div>
         <button onClick={removeFromBasket}>Remove from Basket</button>
