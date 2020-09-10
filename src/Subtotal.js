@@ -17,7 +17,7 @@ function Subtotal() {
             </p>
             <small className="subtotal__gift">
               <input type="checkbox" />
-              This order contains
+              This order contains a gift
             </small>
           </>
         )}
