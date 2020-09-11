@@ -16,7 +16,7 @@ function Order({ order }) {
         <CheckoutProduct
           id={item.id}
           title={item.title}
-          image={item.image}
+          img={item.img}
           price={item.price}
           rating={item.rating}
           hideButton
@@ -30,7 +30,7 @@ function Order({ order }) {
         value={order.data.amount / 100}
         displayType={"text"}
         thousandSeparator={true}
-        prefix={"$"}
+        prefix={"₹"}
       />
     </div>
   );
