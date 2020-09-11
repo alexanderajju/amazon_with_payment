@@ -15,7 +15,7 @@
 .product:hover {
   /* background-color: greenyellow; */
   transform: scale(1.1);
-  border: 1px solid black;
+  /* border: 1px solid black; */
   z-index: 2;
   box-shadow: 5px 10px #e7e7e7;
 }
