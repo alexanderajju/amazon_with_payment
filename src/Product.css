@@ -10,6 +10,14 @@
   min-width: 100px;
   background-color: white;
   z-index: 1;
+  transition: transform 0.2s;
+}
+.product:hover {
+  /* background-color: greenyellow; */
+  transform: scale(1.1);
+  border: 1px solid black;
+  z-index: 2;
+  box-shadow: 5px 10px #e7e7e7;
 }
 
 .product > img {
@@ -33,7 +41,7 @@
   border-color: #a88734 #9c7e31 #846a29;
   color: #111;
 }
-.product > button:hover{
+.product > button:hover {
   background: #f0b319;
   border-color: #e2be61 #d3af53 #a18847;
 }
