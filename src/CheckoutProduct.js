@@ -2,7 +2,7 @@ import React, { forwardRef } from "react";
 import "./CheckoutProduct.css";
 import { useStateValue } from "./StateProvider";
 
-const CheckoutProduct = forwardRef(({ id, img, title, price, rating }, ref) => {
+function CheckoutProduct({ id, img, title, price, rating }) {
   const [{ basket }, dispatch] = useStateValue();
   const removeFromBasket = () => {
     dispatch({ type: "REMOVE_FROM_BASKET", id: id });
@@ -10,7 +10,7 @@ const CheckoutProduct = forwardRef(({ id, img, title, price, rating }, ref) => {
 
   const cost = price.toLocaleString(undefined, { maximumFractionDigits: 2 });
   return (
-    <div ref={ref} className="checkoutProduct">
+    <div className="checkoutProduct">
       <img className="checkoutProduct__image" src={img} alt="" />
       <div className="checkoutProduct__info">
         <p className="checkoutProduct__title">{title}</p>
@@ -29,5 +29,5 @@ const CheckoutProduct = forwardRef(({ id, img, title, price, rating }, ref) => {
       </div>
     </div>
   );
-});
+}
 export default CheckoutProduct;
