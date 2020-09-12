@@ -1,9 +1,10 @@
-const functions = require("firebase-functions");
+// const functions = require("firebase-functions");
 const express = require("express");
 const cors = require("cors");
 const stripe = require("stripe")(
   "sk_test_51HQ4qtHt0wcdFhOshSiHumZlOPea7uSYDiuJCMD7yniLdg6cEROOnymZvwEDPfvXW9rR6kDbgmuk9bStlnOIVexZ00T8MNtDOE"
 );
+const port = process.env.PORT || 3000;
 
 // - App config
 const app = express();
@@ -32,4 +33,7 @@ app.post("/payments/create", async (request, response) => {
 });
 
 // - Listen command
-exports.api = functions.https.onRequest(app);
+// exports.api = functions.https.onRequest(app);
+app.listen(port, () => {
+  console.log("server started");
+});
