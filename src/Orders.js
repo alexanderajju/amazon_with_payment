@@ -27,15 +27,45 @@ function Orders() {
     }
   }, [user]);
 
-  return <div className="orders">
-      <div className="orders__order">
-          {
-              orders?.map(order=>(
-                  <Order order={order}/>
-              ))
-          }
+  console.log(orders.length);
+  const value = orders.length;
+  return user ? (
+    value === 0 ? (
+      <div className="checkout">
+        <div className="checkout__left">
+          <img
+            src="https://images-na.ssl-images-amazon.com/images/G/02/UK_CCMP/TM/OCC_Amazon1._CB423492668.jg"
+            alt=""
+            className="checkout__add"
+          />
+          <div>
+            <h2 className="checkout__title">No Orders for you</h2>
+          </div>
+        </div>
       </div>
-  </div>;
+    ) : (
+      <div className="orders">
+        <div className="orders__order">
+          {orders?.map((order) => (
+            <Order order={order} />
+          ))}
+        </div>
+      </div>
+    )
+  ) : (
+    <div className="checkout">
+      <div className="checkout__left">
+        <img
+          src="https://images-na.ssl-images-amazon.com/images/G/02/UK_CCMP/TM/OCC_Amazon1._CB423492668.jg"
+          alt=""
+          className="checkout__add"
+        />
+        <div>
+          <h2 className="checkout__title">Please login</h2>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default Orders;
